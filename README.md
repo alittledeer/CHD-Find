@@ -10,6 +10,12 @@
 - 对于系统开发者，微信小程序的优势也十分明显，小程序覆盖了PC网页接口、微信公众号等多个板块，大大减小了开发成本、减少了系统维护、升级成本。同时可借助微信强大的流量入口，减少了运营的成本，并且降低了推广的难度。内嵌于微信公众号中开发失物招领小程序，则方便运营者与用户交互和平台运营，运营者一方面可以通过公众号对话框接收用户实时的反馈意见，一方面借由公众号的流量收入覆盖经营成本。总体来说，搭建校园失物招领微信小程序是一 种有效的平台，加之校园内部统的实体失物招领站点的管理，能够更好及时地在小程序中反馈失物信息，高效找寻失物。
 ## 效果展示
 
+![展示1](https://github.com/alittledeer/CHD-Find/blob/master/imgs/%E5%B1%95%E7%A4%BA1.gif "展示1")
+![展示2](https://github.com/alittledeer/CHD-Find/blob/master/imgs/%E5%B1%95%E7%A4%BA2.gif "展示2")
+![展示3](https://github.com/alittledeer/CHD-Find/blob/master/imgs/%E5%B1%95%E7%A4%BA3.gif "展示3")
+![展示4](https://github.com/alittledeer/CHD-Find/blob/master/imgs/%E5%B1%95%E7%A4%BA4.gif "展示4")
+![展示5](https://github.com/alittledeer/CHD-Find/blob/master/imgs/%E5%B1%95%E7%A4%BA5.gif "展示5")
+
 ## 项目架构
 ![项目架构](https://github.com/alittledeer/CHD-Find/blob/master/imgs/%E6%9E%B6%E6%9E%84.png "项目架构图")
 
@@ -37,10 +43,16 @@ git clone https://github.com/alittledeer/CHD-Find.git
 ![项目部署2](https://github.com/alittledeer/CHD-Find/blob/master/imgs/%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B22.png "项目部署2")
 
 #### 3.转为云开发工程
-- **3.1云开发部署**。由于会涉及到云开发相关工具，因此本小程序会将其转为云开发项目。打开项目后，点击工具栏中的“云开发”按钮，然后创建环境名称，等待几十秒后，即可创建成功，创建成功如下图。
+- **3.1云开发部署**。由于会涉及到云开发相关工具，因此本小程序会将其转为云开发项目。打开项目后，点击工具栏中的“云开发”按钮，如下图：
+
+![云开发按钮](https://github.com/alittledeer/CHD-Find/blob/master/imgs/1.%E5%BC%80%E9%80%9A%E4%BA%91%E6%9C%8D%E5%8A%A1.png "云开发按钮")
+
+然后创建环境名称，等待几十秒后，即可创建成功，创建成功如下图。
+
 ![项目部署成功](https://github.com/alittledeer/CHD-Find/blob/master/imgs/%E4%BA%91%E5%BC%80%E5%8F%91%E9%83%A8%E7%BD%B2%E6%88%90%E5%8A%9F%E9%A1%B5%E9%9D%A2.png "部署成功")
+
 - **3.2.云函数部署**。
-如下所示在project.config.json中输入如下代码，其目的是声明一个云函数文件夹的名称和路径，点击如图中红框所示标志手动创建一个同名文件夹。文件夹名称和代码声明名称必须一致
+如下所示在project.config.json中输入如下代码，其目的是声明一个云函数文件夹的名称和路径，点击如下图中红框所示标志手动创建一个同名文件夹。文件夹名称和代码声明名称必须一致
 代码：
 ```javascript
 {
@@ -50,7 +62,10 @@ git clone https://github.com/alittledeer/CHD-Find.git
   "ignore": []
 },
 ```
+![文件配置](https://github.com/alittledeer/CHD-Find/blob/master/imgs/5.%E5%88%9B%E6%96%87%E4%BB%B6%E5%A4%B9%E9%85%8D%E7%BD%AE.png "创文件配置")
+
 ## 项目链接
+[https://github.com/alittledeer/CHD-Find](https://github.com/alittledeer/CHD-Find)
 
 ### 开源许可证
-![链接](https://github.com/alittledeer/CHD-Find/blob/master/LICENSE "开源许可证链接")
+[链接](https://github.com/alittledeer/CHD-Find/blob/master/LICENSE "开源许可证链接")
