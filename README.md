@@ -53,3 +53,4 @@ git clone https://github.com/alittledeer/CHD-Find.git
 ## 项目链接
 
 ### 开源许可证
+![链接](https://github.com/alittledeer/CHD-Find/blob/master/LICENSE "开源许可证链接")
