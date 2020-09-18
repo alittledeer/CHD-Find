@@ -36,9 +36,20 @@ git clone https://github.com/alittledeer/CHD-Find.git
 ![项目部署1](https://github.com/alittledeer/CHD-Find/blob/master/imgs/%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B21.png "项目部署1")
 ![项目部署2](https://github.com/alittledeer/CHD-Find/blob/master/imgs/%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B22.png "项目部署2")
 
-#### 3.转云开发工程
-#### 4.云函数部署
-
+#### 3.转为云开发工程
+- **3.1云开发部署**。由于会涉及到云开发相关工具，因此本小程序会将其转为云开发项目。打开项目后，点击工具栏中的“云开发”按钮，然后创建环境名称，等待几十秒后，即可创建成功，创建成功如下图。
+![项目部署成功](https://github.com/alittledeer/CHD-Find/blob/master/imgs/%E4%BA%91%E5%BC%80%E5%8F%91%E9%83%A8%E7%BD%B2%E6%88%90%E5%8A%9F%E9%A1%B5%E9%9D%A2.png "部署成功")
+- **3.2.云函数部署**。
+如下所示在project.config.json中输入如下代码，其目的是声明一个云函数文件夹的名称和路径，点击如图中红框所示标志手动创建一个同名文件夹。文件夹名称和代码声明名称必须一致
+代码：
+```javascript
+{
+  "description": "项目配置文件",
+  "cloudfunctionRoot":"cloudFn",
+  "packOptions": {
+  "ignore": []
+},
+```
 ## 项目链接
 
 ### 开源许可证
