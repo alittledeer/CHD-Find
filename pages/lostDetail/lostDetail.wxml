@@ -1,0 +1,44 @@
+<!--失物信息页面-->
+<!--失物图列表-->
+<view class="cont">
+	<view>
+		<swiper class="swiper_box" indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+			<block wx:for="{{lostData.descripImageList}}">
+				<!--失物图 列表-->
+				<swiper-item>
+					<image src="{{item}}" class="slide-image" />
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+
+	<!--失物信息-->
+	<view class="title">{{lostData.name}}</view>
+	<!--失物名称,字段名name，类型string-->
+	<view class="lostInfoContain" style="margin-top:15rpx">
+		<view>类目：</view>
+		<view class="lostdescrib">{{lostData.tags.name}}</view>
+		<!--失物类目，字段名tags，类型object-->
+		<view>描述：</view>
+		<view class="lostdescrib">{{lostData.description}}</view>
+		<!--失物描述，字段名description，类型string-->
+		<block wx:if="{{lostData.video}}" >
+			<view class="hei">
+				<video class='video' src="{{lostData.video}}">
+				</video>
+			</view>
+		</block>
+		<view >遗失地址:</view>
+		<view class="lostadd" bindtap="goForMap" data-location="{{lostData.oldHome}}">{{lostData.oldHome.name}}</view>
+		<!--失物发现地址，字段名oldHome，类型string-->
+		<view>存贮地址：</view>
+		<view class="lostadd" bindtap="goForMap" data-location="{{lostData.newHome}}">{{lostData.newHome.name}}</view>
+		<!--失物存贮地址，字段名newHome，类型objct-->
+	</view>
+</view>
+
+
+<!---底部-->
+<view class="footBlock">
+	<view class="claim" bindtap="claimToMyLost" data-status="1">申请认领</view>
+</view>

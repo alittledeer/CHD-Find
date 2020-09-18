@@ -1,0 +1,26 @@
+  <view class="search">
+    <navigator url="/pages/assortment/search/search" class="input">
+      <image class="icon" src="/images/find_select.png"></image>
+      <text class="txt">搜索一下, 失物直达</text>
+    </navigator>
+  </view>
+<view class='container'>
+	<view class='left_part'>
+		<block wx:for="{{navItem}}">
+			<view class="nav_left_item {{curNav == item.id ? 'active':''}}" bindtap='switchRight' data-index="{{index}}" data-id="{{item.id}}">{{item.name}}</view>
+		</block>
+	</view>
+	<view class='right_part'>
+		<view wx:if="{{navItem[curIndex].is_child}}">
+			<block wx:for="{{navItem[curIndex].child_nav}}">
+				<view class="right_part_items">
+					<view class="nav_part" bindtap="searchForTag" data-index="{{index}}">
+						<image src="{{item.sImg}}" mode="aspectFill"></image>
+						<text class='sName'>{{item.sName}}</text>
+						<text class='sContent'>{{item.sContent}}</text>
+					</view>
+				</view>
+			</block>
+		</view>
+	</view>
+</view>

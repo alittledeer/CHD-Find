@@ -1,0 +1,51 @@
+<view class="userinfo">
+	<image class="userinfo-avatar" src="{{userInfo.userImg}}" background-size="cover"></image>
+	<text class="userinfo-nickname">{{userInfo.nickName}}</text>
+</view>
+
+<!-- 待付款，待打包，待取货，已完成 -->
+<view class="navs">
+	<block wx:for-items="{{helper}}" wx:key="name">
+		<view class="nav-item" catchtap="helperFun" data-type="{{index}}" >
+			<image src="{{item.imageurl}}" class="nav-image" />
+			<text>{{item.name}}</text>
+		</view>
+	</block>
+</view>
+<view class="navs">
+	<block wx:for-items="{{loster}}" wx:key="name">
+		<view class="nav-item" catchtap="losterFun" data-type="{{index}}" >
+			<image src="{{item.imageurl}}" class="nav-image" />
+			<text>{{item.name}}</text>
+		</view>
+	</block>
+</view>
+<block wx:if="{{userInfo.isAdministrator}}" >
+	<view class="navs">
+		<block wx:for-items="{{admin}}" wx:key="name">
+			<view class="nav-item" catchtap="adminFun" data-type="{{index}}" >
+				<image src="{{item.imageurl}}" class="nav-image" />
+				<text>{{item.name}}</text>
+			</view>
+		</block>
+	</view>
+</block>
+
+<view class="person-list">
+	<view class="person-line"></view>
+	<view class="list-item" data-fun="1" catchtap="toSubFun">
+		<image class="item-image" src="cloud://mychd-find-4s9do.6d79-mychd-find-4s9do-1301544649/系统媒体文件/icon图标/投诉建议.png"></image>
+		<text class="item-text">意见建议</text>
+	</view>
+	<view class="person-line"></view>
+	<view class="list-item" data-fun="2" catchtap="toSubFun">
+		<image class="item-image" src="cloud://mychd-find-4s9do.6d79-mychd-find-4s9do-1301544649/系统媒体文件/icon图标/使用说明.png"></image>
+		<text class="item-text">使用说明</text>
+	</view>
+	<view class="person-line"></view>
+	<view class="list-item" data-fun="3" catchtap="toSubFun">
+		<image class="item-image" src="cloud://mychd-find-4s9do.6d79-mychd-find-4s9do-1301544649/系统媒体文件/icon图标/待入库.png"></image>
+		<text class="item-text">联系我们</text>
+	</view>
+	<view class="person-line"></view>
+</view>

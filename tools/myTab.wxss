@@ -1,0 +1,43 @@
+/* 上方自制tab的样式 */
+.tab {
+  height: 7vh;
+  display: flex;
+  line-height: 7vh;
+}
+
+.tab view {
+  flex: 1 0 auto;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+}
+
+.tab .active {
+  color: #6883cc;
+  border-bottom: 1px solid #6883cc;
+  padding-bottom: 1.8vh;
+}
+
+.function {
+  background-color: #fff;
+  border-bottom: 1px solid #f4f4f4;
+}
+.function .row-label {
+  font-size: 30rpx;
+  width: 20%;
+  height: 38rpx;
+  color: rgb(28, 65, 228);
+  margin-right: 20px;
+  border: 1px solid #6883cc;
+  border-radius: 20%;
+  text-align:center;
+  float: right;
+}
+.function .row-cue {
+  font-size: 30rpx;
+  height: 38rpx;
+  color: rgb(226, 103, 32);
+  margin-right: 20px;
+  text-align:center;
+  float: right;
+}

@@ -1,0 +1,65 @@
+<!--失物信息页面-->
+<!--失物图列表-->
+<view class="cont">
+	<view>
+		<swiper class="swiper_box" indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+			<block wx:for="{{findData.lostProperty.descripImageList}}">
+				<!--失物图 列表-->
+				<swiper-item>
+					<image src="{{item}}" class="slide-image" />
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+
+	<!--失物信息-->
+	<view class="title">{{findData.lostProperty.name}}</view>
+	<!--失物名称,字段名name，类型string-->
+	<view class="lostInfoContain" style="margin-top:15rpx">
+		<view>类目：</view>
+		<view class="lostdescrib">{{findData.lostProperty.tags.name}}</view>
+		<!--失物类目，字段名tags，类型object-->
+		<view>描述：</view>
+		<view class="lostdescrib">{{findData.lostProperty.description}}</view>
+		<!--失物描述，字段名description，类型string-->
+		<block wx:if="{{findData.lostProperty.video}}">
+			<view class="hei">
+				<video class='video' src="{{findData.lostProperty.video}}"></video>
+			</view>
+		</block>
+		<view>遗失地址:</view>
+		<view class="lostadd">{{findData.lostProperty.oldHome.name}}</view>
+		<!--失物发现地址，字段名oldHome，类型string-->
+		<view>存贮地址：</view>
+		<view class="lostadd">{{findData.lostProperty.newHome.name}}</view>
+		<!--失物存贮地址，字段名newHome，类型objct-->
+	</view>
+</view>
+
+
+
+<!--这里是新加上去的噢-->
+<!--认领人-->
+<view class="userinfo">
+	<image class="userinfo-avatar" src="{{findData.neederInfo.avatarUrl}}" background-size="cover"></image>
+	<text class="userinfo-nickname">{{findData.neederInfo.nickName}}</text>
+</view>
+<!--描述-->
+<view class="addLost-container">
+	<textarea type="text" class="input-style">{{findData.neederDes}}</textarea>
+</view>
+<!--证明图列表-->
+<block wx:if="{{findData.neederPicList.length>0}}">
+	<view class="cont">
+		<view>
+			<swiper class="swiper_box" indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+				<block wx:for="{{findData.neederPicList}}">
+					<!--证明 列表-->
+					<swiper-item>
+						<image src="{{item}}" class="slide-image" />
+					</swiper-item>
+				</block>
+			</swiper>
+		</view>
+	</view>
+</block>

@@ -1,0 +1,75 @@
+/*用户信息的展示 */
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background:#87CEEB;
+  width: 100%; 
+  height: 300rpx;
+}
+.userinfo-avatar {
+  width: 108rpx;
+  height: 108rpx;
+  margin: 40rpx;
+  border-radius: 50%;
+}
+.userinfo-nickname {
+  color: #fff;
+}
+/* 功能页的展示 */
+.navs {
+  display: flex;
+  margin-top: 15rpx;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  border-radius: 20rpx; 
+}
+.nav-item {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20rpx;
+  z-index: 1
+}
+.nav-item .nav-image {
+  width: 55rpx;
+  height: 55rpx;
+  margin: 5rpx;
+}
+.nav-item text {
+  margin-top: 20rpx;
+  font-size: 30rpx;
+  color: rgb(94, 0, 245);
+}
+/*下方单列 */
+.person-list {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+.list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 80rpx;
+}
+.item-image {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 20rpx;
+}
+.item-text {
+  color: gray;
+  font-size: 30rpx;
+  margin-left: 20rpx;
+}
+.person-line {
+  width: 100%;
+  height: 4rpx;
+  background: lightgray;
+}

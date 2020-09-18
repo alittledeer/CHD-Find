@@ -1,0 +1,26 @@
+  <view class='tab'>
+  	<view bindtap='tabFun' data-index="1">
+  		<text class='{{tabIndex==1?"active":""}}'>待寄存</text>
+  	</view>
+  	<view bindtap='tabFun' data-index="2">
+  		<text class='{{tabIndex==2?"active":""}}'>已完成</text>
+  	</view>
+  </view>
+  <import src="../../../tools/lostThing-horizon-tpl/lostThingHorizonTpl.wxml" />
+  <view>
+  	<block wx:for="{{lostList}}" wx:for-item="lostData" wx:for-index="idx">
+  		<view class="function" style="margin-bottom:0">
+  			<view class="system-cue">失物号：</view>
+  			<view class="row-cue">{{lostData._id}}</view>
+  		</view>
+  		<block wx:if="{{tabIndex==2}}">
+  			<view class="address-box">
+  				<view class="add-address">
+  					<view class="title"  catchtap="goForMap" data-location="{{lostData.newHome}}">寄存地址：{{lostData.newHome.name}}</view>
+  					<view class="title" >寄存时间：{{lostData.storeTime}}</view>
+  				</view>
+  			</view>
+  		</block>
+  		<template is="lostShowTplHor" data="{{...lostData}}" />
+  	</block>
+  </view>

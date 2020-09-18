@@ -1,0 +1,43 @@
+<block>
+	<view>
+		<image class="backgroundPic1" src='{{addLostBackground}}' mode="aspectFill"></image>
+	</view>
+</block>
+<view>
+	<view class="tips">
+		<text>Your warm help means a lot!</text>
+	</view>
+	<view class="addLost-container">
+		<view class="systemInputOutside1">
+			<input class="input-contain" type="text" placeholder-class="systemFont1" placeholder="失物名" bindinput="inputName" />
+		</view>
+		<view class="systemInputOutside2">
+			<textarea class='input-description' type="text" placeholder-class="systemFont1" placeholder="具体描述" bindinput="inputDescirption" />
+			</view>
+		<view class="row" bindtap="selectClassify">
+			<view class="row-add">分类</view>
+			<view class="row-input" >
+				<text>{{tags.name}}</text>
+			</view>
+		</view>
+		<view class="row" bindtap="chooseLocation">
+			<view class="row-add">失物发现地址</view>
+			<view class="row-input" >
+				<text>{{oldHome.name}}</text>
+			</view>
+		</view>
+		<view class="systemInputOutside2" style="margin-top:40rpx">
+			 <multiImageUpload hint="选择失物图" imageLimit="4" id="descripImageList" imageMaxPerTime="4"></multiImageUpload>
+		</view>
+		<view class="systemInputOutside3">
+			<view class="videoButton" bindtap="getVideo">拍摄视频20s（可以不拍摄）</view>
+		<block wx:if="{{video}}"><video class="myVideo" src="{{video}}"></video></block>	
+		</view>
+		<view class="submit-contain">
+			<button class="btn" bindtap='IDidIt'>
+				<image class="btnImg" src="/images/sure.png"></image>
+			</button>
+		</view>
+	</view>
+</view>
+

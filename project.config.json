@@ -1,0 +1,150 @@
+{
+	"description": "项目配置文件",
+	"cloudfunctionRoot": "cloudFn/",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"preloadBackgroundData": false,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"useCompilerModule": true,
+		"userConfirmedUseCompilerModuleSwitch": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.12.2",
+	"appid": "wx6ab53aa67f6e55f0",
+	"projectname": "CHDFind",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "e",
+					"pathName": "    pages/shwid/dw",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shwid/dw",
+					"pathName": "pages/shwid/dw",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/iHaveFoundIt/iHaveFoundIt",
+					"pathName": "pages/iHaveFoundIt/iHaveFoundIt",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/iHaveFoundItForm/iHaveFoundIt",
+					"pathName": "pages/iHaveFoundItForm/iHaveFoundIt",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/find/find",
+					"pathName": "pages/find/find",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/assortment/assortmentLost/assortmentLost",
+					"pathName": "pages/assortment/assortmentLost/assortmentLost",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/form/iHaveFoundItForm/iHaveFoundIt",
+					"pathName": "pages/form/iHaveFoundItForm/iHaveFoundIt",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/form/thisIsMineForm/thisIsMine",
+					"pathName": "pages/form/thisIsMineForm/thisIsMine",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/mine",
+					"pathName": "pages/mine/mine",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/allUserFun/helperFun/helperFun",
+					"pathName": "pages/allUserFun/helperFun/helperFun",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/allUserFun/adminFun/adminFun",
+					"pathName": "pages/allUserFun/adminFun/adminFun",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/findDetail/findDetail",
+					"pathName": "pages/findDetail/findDetail",
+					"scene": null
+				}
+			]
+		}
+	}
+}

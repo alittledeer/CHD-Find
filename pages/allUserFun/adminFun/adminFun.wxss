@@ -1,0 +1,32 @@
+@import "../../../tools/commonWxss.wxss"; 
+@import"../../../tools/myTab.wxss";
+@import "../../../tools/lostThing-horizon-tpl/lostThingHorizonTpl.wxss"; 
+page{
+  background-color: white;
+}
+.adminControlShowBlock{
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  border-radius: 30rpx;
+}
+.adminControl{
+  height: 40rpx;
+}
+.adminControl .fun{
+  position: absolute;
+  right: 5px;
+  margin-right: 5px;
+  margin:auto;
+  background-color: rgb(8, 8, 8);
+  color: rgb(255, 255, 255);
+  font-size: 13px;
+  display: flex;
+}

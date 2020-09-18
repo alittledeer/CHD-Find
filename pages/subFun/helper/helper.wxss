@@ -1,0 +1,49 @@
+/* pages/connectUs/connectUs.wxss */
+.pic_miao{
+  /* margin-left: 20rpx;
+  margin-right: 20rpx; */
+  display:flex;                   
+  justify-content: center;         
+}
+.backgroundPic {
+  width: 100%;
+  height: 100%;
+  position:fixed; 
+  background-size:100% 100%;
+  z-index: -1;
+}
+
+.title{
+  font-weight: bold;
+  color: #008B8B;
+  font-family: Microsoft YaHei;
+}
+.title .SHIZHU{
+  font-size: large;
+  color: darkorange;
+}
+.title .Step{
+  color: brown;
+}
+.lostInfoContain {
+  padding: 1% 5% 5% 5%;
+  line-height: 25px;
+  font-weight: bold;
+  font-family: Microsoft YaHei;
+  font-size: 32rpx;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  border-radius: 20rpx;
+}
+.lostInfoContain .lostdescrib{
+  color: rgb(198, 143, 62);
+}
+.lostInfoContain .lostadd{
+  font-style: italic;
+  text-decoration: underline;
+  color: rgb(82, 82, 214);
+}

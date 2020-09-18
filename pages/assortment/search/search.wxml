@@ -1,0 +1,30 @@
+   <!--引入自定义模板类。模板类位于工具类文件夹中-->
+<import src="../../../tools/lostThing-tpl/lostThingTpl.wxml" />
+   <view>
+	<image class="backgroundPic" src='{{backgroundPic}}' mode="aspectFill"></image>
+</view>
+   <view class="search-header">
+   	<view class="input-box">
+   		<image class="icon-search" src="/images/find_select.png"></image>
+   		<input name="input" class="keyword" value="{{keyWord}}" confirm-type="search" bindinput="inputChange" confirm-type="search" placeholder="输入关键字试一试吧" />
+   		<image src="/images/search-dele.png" class="del" wx:if="{{keyWord}}" bindtap="clearKeyword"></image>
+   	</view>
+   	<view wx:if="{{!keyWord}}" class="right" bindtap="closeSearch">返回</view>
+   	<view wx:if="{{keyWord}}" class="right" bindtap="goOnSearch">确认</view>
+   </view>
+   <block wx:if="{{keyWord&&list.length==0&&check}}">
+   	<view class="search-result-empty">
+   		<image class="icon" src="/images/no-search.png"></image>
+   		<text class="text">没找到，换个关键字试试</text>
+   	</view>
+   </block>
+   <block wx:if="{{list.length>0}}">
+   	<!--显示用户所有打卡项，使用了wx循环-->
+   	<view class="lostThing-contain">
+   		<scroll-view scroll-y="true">
+   			<block wx:for="{{list}}" wx:for-item="lostData" wx:for-index="idx">
+   				<template is="lostShowTpl" data="{{...lostData}}" />
+   			</block>
+   		</scroll-view>
+   	</view>
+   </block>

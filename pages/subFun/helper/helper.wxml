@@ -1,0 +1,34 @@
+<!--pages/connectUs/connectUs.wxml-->
+
+<view>
+	<image class="backgroundPic" src='{{backgroundPic}}' mode="aspectFill"></image>
+</view>
+
+<view class="pic_miao">
+<image src="cloud://mychd-find-4s9do.6d79-mychd-find-4s9do-1301544649/系统媒体文件/其他素材/沙雕喵2.gif" mode="aspectFill" />
+</view>
+
+<view class="title">
+<view class="lostInfoContain">
+
+<text>
+<text class="SHIZHU">失主：\n</text>
+<text class="Step">step1</text>
+方法一：在首页下拉，一直到找到您的失物为止
+方法二：点击分类页面，搜索或按分类进行查找，直到找到您的失物为止
+<text class="Step">step2</text>
+点击图片，上传描述信息和证明图片（使用过的图片或购买时的图片）
+<text class="Step">step3</text>
+提交表单
+
+<text class="SHIZHU">拾主：\n</text>
+<text class="Step">step1</text>
+点击首页，点击“我见到东西啦”
+<text class="Step">step2</text>
+输入“失物名”、“具体描述”、“分类”、“失物发现地址”、上传“失物图”、视频（可选）
+<text class="Step">step3</text>
+提交表单
+</text>
+
+</view>
+</view>

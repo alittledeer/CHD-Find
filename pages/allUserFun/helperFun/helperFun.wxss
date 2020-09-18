@@ -1,0 +1,6 @@
+@import "../../../tools/commonWxss.wxss"; 
+@import"../../../tools/myTab.wxss";
+@import "../../../tools/lostThing-horizon-tpl/lostThingHorizonTpl.wxss"; 
+page{
+  background-color: white;
+}

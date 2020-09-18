@@ -1,0 +1,31 @@
+<!--登录了背景是校园-->
+<block wx:if="{{userInfo.openid}}">
+	<view>
+		<image class="backgroundPic" src='{{schoolBackground}}' mode="aspectFill"></image>
+	</view>
+</block>
+<view class="welcome-container">
+	<view class="userinfo">
+		<!-- 没有登录显示登录 -->
+		<button wx:if="{{!userInfo.openid}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">登陆</button>
+		<!-- 登录了就显示头像 -->
+		<block wx:if="{{userInfo.openid}}">
+			<image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
+		</block>
+
+		<!-- 没有登录的欢迎语 -->
+		<block wx:if="{{!userInfo.openid}}">
+			<view class="usermotto">
+				<text class="user-motto">{{notInMotto}}\n</text>
+			</view>
+		</block>
+
+		<!-- 欢迎语 -->
+		<block wx:if="{{userInfo.openid}}">
+			<view class="usermotto">
+				<view class="welcomePgae-login-button" bindtap="goToIndex">进入寻物</view>
+			</view>
+		</block>
+	</view>
+
+</view>

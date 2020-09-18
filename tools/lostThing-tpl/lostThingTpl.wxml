@@ -1,0 +1,16 @@
+<!-- 失物展示框
+用于展示各类丢失寄存的货物 -->
+<template name="lostShowTpl">
+	<view class="lostThing-insideBlock" id="{{_id}}" bindtap="toDetail">
+		<view>
+			<image mode='aspectFit' mode="widthFix" lazy-load="true" src="{{descripImageList[0]}}" class="lostThing-mainImage" />
+		</view>
+		<view class="lostThing-name">
+			{{name}}
+		</view>
+		<view class="lostThing-descripWrap">
+			<p class="checkIt" data-index="{{_id}}" catchtap="helpIt">帮一帮</p>
+			<p class="lostThing-tags">{{tags.name}}</p>
+		</view>
+	</view>
+</template>

@@ -1,0 +1,72 @@
+  <view class='tab'>
+  	<view bindtap='tabFun' data-index="1">
+  		<text class='{{tabIndex==1?"active":""}}'>待入库失物</text>
+  	</view>
+  	<view bindtap='tabFun' data-index="2">
+  		<text class='{{tabIndex==2?"active":""}}'>待审核认领</text>
+  	</view>
+  	<view bindtap='tabFun' data-index="3">
+  		<text class='{{tabIndex==3?"active":""}}'>待领取失物</text>
+  	</view>
+  </view>
+
+
+  <import src="../../../tools/lostThing-horizon-tpl/lostThingHorizonTpl.wxml" />
+
+
+  <view>
+
+  	<block wx:for="{{lostList}}" wx:if="{{tabIndex==1}}" wx:for-item="lostData" wx:for-index="idx">
+  		<view class="adminControlShowBlock">
+  			<view class="function" style="margin-bottom:0">
+  				<view>
+  					<view class="system-cue" style="font-weight:bold; margin-left:45%; width:100%" bindtap="addAddress" data-id="{{lostData._id}}" data-name="{{lostData.name}}">
+  						点击寄存</view>
+  				</view>
+  				<view style="width:100%">
+  					<view class="system-cue">失物号：</view>
+  					<view class="row-cue">{{lostData._id}}</view>
+  				</view>
+  			</view>
+  			<template is="lostShowTplHor" data="{{...lostData}}" />
+  		</view>
+  	</block>
+
+
+  	<block wx:for="{{lostList}}" wx:if="{{tabIndex!=1}}" wx:for-item="lostData" wx:for-index="idx">
+  		<view class="adminControlShowBlock">
+  			<view class="function" style="margin-bottom:0">
+  				<view class="system-cue">流水号：</view>
+  				<view class="row-cue">{{lostData._id}}</view>
+  			</view>
+  			<view class="address-box">
+  				<view class="add-address">
+  					<view class="title">寄存地址：{{lostData.lostProperty.newHome.name}}</view>
+  					<view class="title">寄存时间：{{lostData.lostProperty.storeTime}}</view>
+  					<block wx:if="{{tabIndex==3}}">
+  						<view class="title">提取密码：{{lostData.secret}}</view>
+  					</block>
+  				</view>
+  			</view>
+  			<view bindtap="toFindDetail" data-id="{{lostData._id}}">
+  				<template is="lostShowTplHor" data="{{...lostData.lostProperty}}" />
+  			</view>
+  			<block wx:if="{{tabIndex==2}}">
+  				<view class="adminControl">
+  					<view class="fun" style="margin-bottom:20rpx">
+  						<view data-item="{{lostData}}" data-type="pass" catchtap="judegeApplication">通过</view>
+  						<view style="margin-left:5px" data-item="{{lostData}}" ata-type="notPass" catchtap="judegeApplication">| 驳回</view>
+  					</view>
+  				</view>
+  			</block>
+  			<block wx:if="{{tabIndex==3}}">
+  				<view class="adminControl">
+  					<view class="fun" style="margin-bottom:20rpx">
+  						<view data-item="{{lostData}}" data-type="pass" catchtap="farewellLost">出库</view>
+
+  					</view>
+  				</view>
+  			</block>
+  		</view>
+  	</block>
+  </view>

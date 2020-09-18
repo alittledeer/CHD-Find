@@ -1,0 +1,46 @@
+/* 首先导入全局样式 */
+@import "../../tools/commonWxss.wxss"; 
+
+.welcome-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.userinfo {
+  /* 弹性布局
+   纵向布局
+   居中对齐弹性盒的各项元素：
+  */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  /* 宽；高；外边距（在一个声明中设置所有外边距属性）上中下距离；向元素添加圆角边框*/
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.usermotto {
+  /* 距离上一个元素200像素 */
+  margin-top: 200rpx;
+  color: white
+}
+
+.welcomePgae-login-button {
+  /* 边框为一像素蓝色；向元素添加圆角边框*/
+  margin-top: 200rpx;
+  border: 3px solid #6495ED;
+  border-radius: 20%;
+  text-align: center;
+  color: white;
+  background: #87CEEB;
+  width: 256rpx;
+}

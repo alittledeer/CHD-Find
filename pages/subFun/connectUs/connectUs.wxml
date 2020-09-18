@@ -1,0 +1,19 @@
+<!--pages/connectUs/connectUs.wxml-->
+
+<view>
+	<image class="backgroundPic" src='{{backgroundPic}}' mode="aspectFill"></image>
+</view>
+<view class="pic_miao">
+<image src="cloud://mychd-find-4s9do.6d79-mychd-find-4s9do-1301544649/系统媒体文件/其他素材/沙雕喵.gif" mode="aspectFill" />
+</view>
+<view class="title">
+<view class="lostInfoContain">
+
+<text>联系我们:
+Tel：13399999999
+扣扣：123456789
+WX：CHDFind
+电子邮箱：CHDFind@qq.com\n</text>
+(以上内容完全不属实)
+</view>
+</view>

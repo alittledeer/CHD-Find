@@ -1,0 +1,37 @@
+<block>
+	<view>
+		<image class="backgroundPic2" src='{{addLostBackground}}' mode="aspectFill"></image>
+	</view>
+</block>
+
+
+<!--引入自定义模板类。模板类位于工具类文件夹中-->
+<import src="../../../tools/lostThing-horizon-tpl/lostThingHorizonTpl.wxml" />
+<view>
+	<block wx:for="{{lostList}}" wx:for-item="lostData" wx:for-index="idx">
+		<view class="address-box">
+			<view class="add-address">
+				<view class="title">寄存地址：{{lostData.newHome.name}}</view>
+				<view class="title">寄存时间：{{lostData.storeTime}}</view>
+			</view>
+		</view>
+		<template is="lostShowTplHor" data="{{...lostData}}" />
+	</block>
+</view>
+<view class="tips">
+	<text>O ever weeping,O ever youthful</text>
+</view>
+<!--失物信息描述-->
+<view class="addLost-container">
+	<view class="systemInputOutside2">
+		<textarea class='input-description' type="text" placeholder-class="systemFont1" placeholder="描述一下此物别人不知道的细节，用于证明您的身份" bindinput="inputDescirption" />
+		</view>
+	<view class="systemInputOutside2" style="margin-top:20rpx">
+		<multiImageUpload class="upLoadPic" hint="选择失物图" imageLimit="4" id="descripImageList" imageMaxPerTime="4"></multiImageUpload>
+  </view>
+  		<view class="submit-contain">
+			<button class="btn" bindtap='IDidIt'>
+				<image class="btnImg" src="/images/sure.png"></image>
+			</button>
+		</view>
+</view>

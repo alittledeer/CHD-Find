@@ -1,0 +1,148 @@
+/* pages/index/detail.wxss */
+/*失物视频组*/
+.video {
+  width: 100%;
+  height: 400rpx;
+}
+
+.hei {
+  height: 400rpx;
+}
+.title{
+  font-weight: bold;
+  color: #008B8B;
+  font-family: Microsoft YaHei;
+}
+/*失物信息*/
+.lostInfoContain {
+  padding: 1% 5% 5% 5%;
+  line-height: 25px;
+  font-weight: bold;
+  font-family: Microsoft YaHei;
+  font-size: 32rpx;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  border-radius: 20rpx;
+}
+.lostInfoContain .lostdescrib{
+  color: rgb(198, 143, 62);
+}
+.lostInfoContain .lostadd{
+  font-style: italic;
+  text-decoration: underline;
+  color: rgb(82, 82, 214);
+}
+.gmxx .leimu {
+  font-size: 15px;
+  color: #dd2727;
+  padding-top: 10px;
+}
+
+/*失物图列表*/
+.swiper_box {
+  width: 100%;
+  height: 160px;
+}
+
+.swiper-item {
+  display: block;
+  height: 150px;
+}
+
+.slide-image {
+  width: 100%;
+  height: 150px;
+}
+
+/*尾部*/
+.footfixed {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  font-size: 14px;
+  border-top: 1px solid #eee;
+  line-height: 50px;
+  font-weight: 700;
+  color: #000
+}
+
+.claim {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background:#008B8B;
+  z-index: 100;
+  width: 100%;
+  font-size: 14px;
+  border-top: 1px solid #eee;
+  line-height: 50px;
+  font-weight: 700;
+  color: snow;
+  text-align: center
+}
+
+/*用户信息的展示 */
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background:#87CEEB;
+  width: 100%; 
+  height: 300rpx;
+}
+.userinfo-avatar {
+  width: 108rpx;
+  height: 108rpx;
+  margin: 40rpx;
+  border-radius: 50%;
+}
+.userinfo-nickname {
+  color: #fff;
+}
+
+/*阴影*/
+.addLost-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  width:90%;
+  margin-left:5%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  border-radius: 5px;
+}
+.input-style{
+  width: 90%;
+  height: 200px;
+  /* border:1px solid #ccc; */
+ /* margin:10px auto;*/
+}
+
+.swiper_box {
+  width: 100%;
+  height: 160px;
+}
+
+.swiper-item {
+  display: block;
+  height: 150px;
+}
+
+.slide-image {
+  width: 100%;
+  height: 150px;
+}

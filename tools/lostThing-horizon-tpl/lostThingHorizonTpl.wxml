@@ -1,0 +1,18 @@
+<template name="lostShowTplHor">
+<view class="lostThingHor">
+	<view class="myLost">
+		<view class="img-box">
+			<image src="{{descripImageList[0]}}" class="img" />
+		</view>
+		<view class="text-box">
+			<view class="arow arow01">
+				<view class="lost-name">{{name}}</view>
+				<view class="lost-sysDes">上班时间早8点至晚7点，节假日不休</view>
+			</view>
+			<view class="arow">
+				<view class="lost-num">{{description}}</view>
+			</view>
+		</view>
+	</view>
+</view>
+</template>

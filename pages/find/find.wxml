@@ -1,0 +1,51 @@
+<!-- 失物背景 -->
+<view>
+	<image class="backgroundPic" src='{{backgroundPic}}' mode="aspectFill"></image>
+</view>
+<!-- 用于展示广告 -->
+<view>
+	<text class="adTitle">长大你知</text>
+	<view class="adDescrip">
+		<text>安律委重大联动来啦</text>
+	</view>
+</view>
+<!--显示广告图片，使用了swiper组件-->
+<swiper catchtap="onSwiperTap" vertical="{{false}}" indicator-dots="true" autoplay="true" interval="2000" circular="true">
+	<swiper-item>
+		<image src="cloud://mychd-find-4s9do.6d79-mychd-find-4s9do-1301544649/系统媒体文件/长大背景/明远湖.jpg" mode='aspectFill' />
+	</swiper-item>
+	<swiper-item>
+		<image src="cloud://mychd-find-4s9do.6d79-mychd-find-4s9do-1301544649/系统媒体文件/长大背景/朝晖体育场2.jpg" mode='aspectFill' />
+	</swiper-item>
+</swiper>
+<view class="mySysBtn" bindtap="iHaveFoundIt">我捡到东西啦</view>
+
+<!-- 页面的导航 -->
+<view catchtap="">
+	<view class="navs">
+		<block wx:for-items="{{menus}}" wx:key="name">
+			<view class="nav-item" data-typeid="{{item.code}}">
+				<image src="{{item.path}}" class="nav-image" />
+				<text>{{item.title}}</text>
+			</view>
+		</block>
+	</view>
+</view>
+<view>
+	<text class="adTitle">为您服务</text>
+	<view class="adDescrip">
+		<text>分享给他人，手有余香</text>
+	</view>
+</view>
+
+<!-- 用于显示失物 -->
+<!--引入自定义模板类。模板类位于工具类文件夹中-->
+<import src="../../tools/lostThing-tpl/lostThingTpl.wxml" />
+<!--显示用户所有打卡项，使用了wx循环-->
+<view class="lostThing-contain">
+	<scroll-view scroll-y="true">
+		<block wx:for="{{lostList}}" wx:for-item="lostData" wx:for-index="idx">
+			<template is="lostShowTpl" data="{{...lostData}}" />
+		</block>
+	</scroll-view>
+</view>

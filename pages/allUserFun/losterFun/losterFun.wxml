@@ -1,0 +1,33 @@
+  <view class='tab'>
+  	<view bindtap='tabFun' data-index="1">
+  		<text class='{{tabIndex==1?"active":""}}'>待审批</text>
+  	</view>
+  	<view bindtap='tabFun' data-index="2">
+  		<text class='{{tabIndex==2?"active":""}}'>待认领</text>
+  	</view>
+  	<view bindtap='tabFun' data-index="3">
+  		<text class='{{tabIndex==3?"active":""}}'>已完成</text>
+  	</view>
+  </view>
+  <import src="../../../tools/lostThing-horizon-tpl/lostThingHorizonTpl.wxml" />
+  <view>
+  	<block wx:for="{{lostList}}" wx:for-item="lostData" wx:for-index="idx">
+  		<view class="function" style="margin-bottom:0">
+  			<view class="system-cue">流水号：</view>
+  			<view class="row-cue">{{lostData._id}}</view>
+  		</view>
+
+  		<view class="address-box">
+  			<view class="add-address">
+  				<view class="title" catchtap="goForMap" data-location="{{lostData.lostProperty.newHome}}">寄存地址：{{lostData.lostProperty.newHome.name}}</view>
+  				<view class="title">寄存时间：{{lostData.lostProperty.storeTime}}</view>
+  				<block wx:if="{{tabIndex==2}}">
+  					<view class="title">提取密码：{{lostData.secret}}</view>
+  				</block>
+  			</view>
+  		</view>
+			<view bindtap="toFindDetail" data-id="{{lostData._id}}">
+  		<template is="lostShowTplHor" data="{{...lostData.lostProperty}}" />
+			</view>
+  	</block>
+  </view>

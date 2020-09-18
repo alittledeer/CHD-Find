@@ -1,0 +1,14 @@
+<!-- 用于显示失物 -->
+<!--引入自定义模板类。模板类位于工具类文件夹中-->
+<import src="../../../tools/lostThing-tpl/lostThingTpl.wxml" />
+<view>
+	<image class="backgroundPic" src='{{backgroundPic}}' mode="aspectFill"></image>
+</view>
+<!--显示用户所有打卡项，使用了wx循环-->
+<view class="lostThing-contain">
+	<scroll-view scroll-y="true">
+		<block wx:for="{{lostList}}" wx:for-item="lostData" wx:for-index="idx">
+			<template is="lostShowTpl" data="{{...lostData}}" />
+		</block>
+	</scroll-view>
+</view>

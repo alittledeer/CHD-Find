@@ -1,0 +1,26 @@
+<!-- 表单 -->
+<block>
+	<view>
+		<image class="backgroundPic" src='{{backgroundPic}}' mode="aspectFill"></image>
+	</view>
+</block>
+
+<view>
+<form bindsubmit="formSubmit">
+
+	<view class="tips">
+		<input class="input-contain" type="text" placeholder-class="systemFont1" placeholder="标题" bindinput="myInputT" />
+	</view>
+
+<view class="addLost-container">
+  <textarea type="text" placeholder='请输入反馈内容' class="input-style" bindinput="myInputD"></textarea>
+  </view>
+
+  <button  class="btn" bindtap='IDidIt'>
+      <image class="btnImg" src="/images/sure.png"></image>
+  </button>
+
+</form>
+</view>
+
+ 
